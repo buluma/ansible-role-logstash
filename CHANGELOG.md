@@ -4,6 +4,10 @@
 
 [Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.0...HEAD)
 
+**Closed issues:**
+
+- Add to tracker [\#4](https://github.com/buluma/ansible-role-logstash/issues/4)
+
 **Merged pull requests:**
 
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#3](https://github.com/buluma/ansible-role-logstash/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
