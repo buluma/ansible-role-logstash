@@ -11,28 +11,27 @@ Logstash for Linux.
 This example is taken from `molecule/default/converge.yml` and is tested on each push, pull request and release.
 ```yaml
 ---
-- name: Converge
+- name: converge
   hosts: all
-  become: true
-
-  vars:
-    logstash_enabled_on_boot: false
-
-  pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=true cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-
-    - name: Use Java 8 on Debian/Ubuntu.
-      set_fact:
-        java_packages:
-          - openjdk-8-jdk
-      when: ansible_os_family == 'Debian'
+  become: yes
+  gather_facts: yes
 
   roles:
-    - buluma.java
-    - buluma.elasticsearch
-    - buluma.logstash
+    - role: buluma.logstash
+```
+
+The machine needs to be prepared. In CI this is done using `molecule/default/prepare.yml`:
+```yaml
+---
+- name: prepare
+  hosts: all
+  become: yes
+  gather_facts: no
+
+  roles:
+    - role: buluma.bootstrap
+    - role: buluma.core_dependencies
+    - role: buluma.elastic_repo
 ```
 
 
@@ -41,29 +40,9 @@ This example is taken from `molecule/default/converge.yml` and is tested on each
 The default values for the variables are set in `defaults/main.yml`:
 ```yaml
 ---
-logstash_version: '7.x'
-
-logstash_package: logstash
-
-logstash_listen_port_beats: 5044
-
-logstash_elasticsearch_hosts:
-  - http://localhost:9200
-
-logstash_local_syslog_path: /var/log/syslog
-logstash_monitor_local_syslog: true
-
-logstash_dir: /usr/share/logstash
-
-logstash_ssl_dir: /etc/pki/logstash
-logstash_ssl_certificate_file: ""
-logstash_ssl_key_file: ""
-
-logstash_enabled_on_boot: true
-
-logstash_install_plugins:
-  - logstash-input-beats
-  - logstash-filter-multiline
+# Elastic offers both "oss" (Apache 2.0 license) and "elastic"
+# (Elastic license). Select the type here. Either "oss" or "elastic"
+logstash_type: oss
 ```
 
 ## [Requirements](#requirements)
@@ -76,9 +55,9 @@ The following roles are used to prepare a system. You can prepare your system in
 
 | Requirement | GitHub | GitLab |
 |-------------|--------|--------|
-|[buluma.java](https://galaxy.ansible.com/buluma/java)|[![Build Status GitHub](https://github.com/buluma/ansible-role-java/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-java/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-java/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-java)|
-|[buluma.elasticsearch](https://galaxy.ansible.com/buluma/elasticsearch)|[![Build Status GitHub](https://github.com/buluma/ansible-role-elasticsearch/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-elasticsearch/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-elasticsearch/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-elasticsearch)|
-|[buluma.logstash](https://galaxy.ansible.com/buluma/logstash)|[![Build Status GitHub](https://github.com/buluma/ansible-role-logstash/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/ansible-role-logstash/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/ansible-role-logstash/badges/master/pipeline.svg)](https://gitlab.com/buluma/ansible-role-logstash)|
+|[robertdebock.bootstrap](https://galaxy.ansible.com/buluma/robertdebock.bootstrap)|[![Build Status GitHub](https://github.com/buluma/robertdebock.bootstrap/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.bootstrap/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.bootstrap/badges/master/pipeline.svg)](https://gitlab.com/buluma/robertdebock.bootstrap)|
+|[robertdebock.core_dependencies](https://galaxy.ansible.com/buluma/robertdebock.core_dependencies)|[![Build Status GitHub](https://github.com/buluma/robertdebock.core_dependencies/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.core_dependencies/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.core_dependencies/badges/master/pipeline.svg)](https://gitlab.com/buluma/robertdebock.core_dependencies)|
+|[robertdebock.elastic_repo](https://galaxy.ansible.com/buluma/robertdebock.elastic_repo)|[![Build Status GitHub](https://github.com/buluma/robertdebock.elastic_repo/workflows/Ansible%20Molecule/badge.svg)](https://github.com/buluma/robertdebock.elastic_repo/actions)|[![Build Status GitLab ](https://gitlab.com/buluma/robertdebock.elastic_repo/badges/master/pipeline.svg)](https://gitlab.com/buluma/robertdebock.elastic_repo)|
 
 ## [Context](#context)
 
@@ -94,11 +73,13 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|el|all|
+|amazon|all|
 |debian|all|
-|ubuntu|all|
+|el|7, 8|
+|fedora|all|
+|ubuntu|focal, bionic|
 
-The minimum version of Ansible required is 2.4, tests have been done to:
+The minimum version of Ansible required is 2.10, tests have been done to:
 
 - The previous version.
 - The current version.
@@ -114,7 +95,7 @@ If you find issues, please register them in [GitHub](https://github.com/buluma/a
 
 ## [License](#license)
 
-license (Apache-2.0)
+Apache-2.0
 
 ## [Author Information](#author-information)
 

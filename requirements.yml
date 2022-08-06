@@ -1,6 +1,5 @@
 ---
 roles:
-  - name: buluma.java
-  - name: buluma.elasticsearch
-  - name: buluma.logstash
-collections:
+  - name: robertdebock.bootstrap
+  - name: robertdebock.core_dependencies
+  - name: robertdebock.elastic_repo

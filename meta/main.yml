@@ -1,23 +1,30 @@
 ---
-dependencies: []
-
 galaxy_info:
   role_name: logstash
   author: buluma
   description: Logstash for Linux.
-  company: "ShadowNet"
+  company: ShadowNet
   license: Apache-2.0
-  min_ansible_version: 2.4
+  min_ansible_version: "2.10"
   platforms:
-    - name: EL
+    - name: Amazon
       versions:
         - all
     - name: Debian
       versions:
         - all
-    - name: Ubuntu
+    - name: EL
+      versions:
+        - "7"
+        - "8"
+    - name: Fedora
       versions:
         - all
+    - name: Ubuntu
+      versions:
+        - focal
+        - bionic
+
   galaxy_tags:
     - web
     - system
@@ -26,3 +33,4 @@ galaxy_info:
     - logs
     - elk
     - logstash
+dependencies: []

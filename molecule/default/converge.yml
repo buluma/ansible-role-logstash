@@ -1,23 +1,8 @@
 ---
-- name: Converge
+- name: converge
   hosts: all
-  become: true
-
-  vars:
-    logstash_enabled_on_boot: false
-
-  pre_tasks:
-    - name: Update apt cache.
-      apt: update_cache=true cache_valid_time=600
-      when: ansible_os_family == 'Debian'
-
-    - name: Use Java 8 on Debian/Ubuntu.
-      ansible.builtin.set_fact:
-        java_packages:
-          - openjdk-8-jdk
-      when: ansible_os_family == 'Debian'
+  become: yes
+  gather_facts: yes
 
   roles:
-    - buluma.java
-    - buluma.elasticsearch
-    - buluma.logstash
+    - role: ansible-role-logstash
