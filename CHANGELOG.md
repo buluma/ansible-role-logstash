@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+## [v0.1.3](https://github.com/buluma/ansible-role-logstash/tree/v0.1.3) (2022-08-06)
 
-[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.1...v0.1.3)
 
 **Closed issues:**
 
@@ -12,17 +12,17 @@
 
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.3 to 1.0.4 [\#3](https://github.com/buluma/ansible-role-logstash/pull/3) ([dependabot[bot]](https://github.com/apps/dependabot))
 
-## [v0.1.0](https://github.com/buluma/ansible-role-logstash/tree/v0.1.0) (2022-03-24)
-
-[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.1...v0.1.0)
-
 ## [v0.1.1](https://github.com/buluma/ansible-role-logstash/tree/v0.1.1) (2022-03-24)
 
 [Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.2...v0.1.1)
 
 ## [v0.1.2](https://github.com/buluma/ansible-role-logstash/tree/v0.1.2) (2022-03-24)
 
-[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/df20e0429b41f37e48301f3570982a8bb1e51b63...v0.1.2)
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.0...v0.1.2)
+
+## [v0.1.0](https://github.com/buluma/ansible-role-logstash/tree/v0.1.0) (2022-03-24)
+
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/df20e0429b41f37e48301f3570982a8bb1e51b63...v0.1.0)
 
 **Merged pull requests:**
 
