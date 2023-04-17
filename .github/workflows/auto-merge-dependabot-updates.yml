@@ -16,6 +16,7 @@ jobs:
   run:
     runs-on: ubuntu-latest
     steps:
+      - uses: actions/checkout@v3
       - name: Auto Merge Dependabot Updates
         uses: buluma/gh-action-auto-merge-dependabot-updates@1.0.7
         with:
