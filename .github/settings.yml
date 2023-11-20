@@ -5,4 +5,4 @@
 repository:
   description: Logstash for Linux.
   homepage: https://buluma.github.io/
-  topics: web, system, monitoring, logging, logs, elk, logstash, ansible, molecule, tox, playbook, hacktoberfest
+  topics: web, system, monitoring, logging, logs, elk, logstash, ansible, molecule, tox, playbook
