@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.4...HEAD)
+
+**Closed issues:**
+
+- Update buluma/todo-to-issue-action@v1.0.1 @buluma [\#15](https://github.com/buluma/ansible-role-logstash/issues/15)
+
 ## [v0.1.4](https://github.com/buluma/ansible-role-logstash/tree/v0.1.4) (2022-09-30)
 
 [Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.3...v0.1.4)
