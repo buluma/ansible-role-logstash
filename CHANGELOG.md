@@ -1,8 +1,8 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+## [v0.1.5](https://github.com/buluma/ansible-role-logstash/tree/v0.1.5) (2023-12-28)
 
-[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.4...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.1.4...v0.1.5)
 
 **Closed issues:**
 
