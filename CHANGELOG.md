@@ -1,12 +1,13 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+## [v0.4.0](https://github.com/buluma/ansible-role-logstash/tree/v0.4.0) (2024-01-20)
 
-[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.3.0...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.3.0...v0.4.0)
 
 **Merged pull requests:**
 
 - Bump buluma/molecule-action from 6.0.1 to 6.0.3 [\#21](https://github.com/buluma/ansible-role-logstash/pull/21) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump buluma/molecule-action from 6.0.0 to 6.0.1 [\#20](https://github.com/buluma/ansible-role-logstash/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v0.3.0](https://github.com/buluma/ansible-role-logstash/tree/v0.3.0) (2024-01-10)
 
@@ -14,7 +15,6 @@
 
 **Merged pull requests:**
 
-- Bump buluma/molecule-action from 6.0.0 to 6.0.1 [\#20](https://github.com/buluma/ansible-role-logstash/pull/20) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump buluma/gh-action-auto-merge-dependabot-updates from 1.0.5 to 1.0.8 [\#19](https://github.com/buluma/ansible-role-logstash/pull/19) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/checkout from 3 to 4 [\#18](https://github.com/buluma/ansible-role-logstash/pull/18) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump actions/setup-python from 3 to 5 [\#17](https://github.com/buluma/ansible-role-logstash/pull/17) ([dependabot[bot]](https://github.com/apps/dependabot))
