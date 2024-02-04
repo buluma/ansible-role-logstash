@@ -1,5 +1,13 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.4.0...HEAD)
+
+**Merged pull requests:**
+
+- Bump release-drafter/release-drafter from 5 to 6 [\#22](https://github.com/buluma/ansible-role-logstash/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
+
 ## [v0.4.0](https://github.com/buluma/ansible-role-logstash/tree/v0.4.0) (2024-01-20)
 
 [Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.3.0...v0.4.0)
