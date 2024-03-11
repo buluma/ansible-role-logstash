@@ -6,6 +6,7 @@
 
 **Merged pull requests:**
 
+- Bump release-drafter/release-drafter from 5 to 6 [\#23](https://github.com/buluma/ansible-role-logstash/pull/23) ([dependabot[bot]](https://github.com/apps/dependabot))
 - Bump release-drafter/release-drafter from 5 to 6 [\#22](https://github.com/buluma/ansible-role-logstash/pull/22) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v0.4.0](https://github.com/buluma/ansible-role-logstash/tree/v0.4.0) (2024-01-20)
