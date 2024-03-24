@@ -77,9 +77,9 @@ This role has been tested on these [container images](https://hub.docker.com/u/b
 
 |container|tags|
 |---------|----|
-|[Amazon](https://hub.docker.com/repository/docker/buluma/amazonlinux/general)|all|
+|[Amazon](https://hub.docker.com/repository/docker/buluma/amazonlinux/general)|2018.03, 2023|
 |[Debian](https://hub.docker.com/repository/docker/buluma/debian/general)|all|
-|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|7, 8|
+|[EL](https://hub.docker.com/repository/docker/buluma/enterpriselinux/general)|all|
 |[Fedora](https://hub.docker.com/repository/docker/buluma/fedora/general)|all|
 |[Ubuntu](https://hub.docker.com/repository/docker/buluma/ubuntu/general)|focal, bionic|
 

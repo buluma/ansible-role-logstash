@@ -9,14 +9,14 @@ galaxy_info:
   platforms:
     - name: Amazon
       versions:
-        - all
+        - "2018.03"
+        - "2023"
     - name: Debian
       versions:
         - all
     - name: EL
       versions:
-        - "7"
-        - "8"
+        - all
     - name: Fedora
       versions:
         - all
