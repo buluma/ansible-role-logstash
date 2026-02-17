@@ -1,5 +1,14 @@
 # Changelog
 
+## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v24.3.31...HEAD)
+
+**Closed issues:**
+
+- Update action [\#14](https://github.com/buluma/ansible-role-logstash/issues/14)
+- rebuild action [\#13](https://github.com/buluma/ansible-role-logstash/issues/13)
+
 ## [v24.3.31](https://github.com/buluma/ansible-role-logstash/tree/v24.3.31) (2024-03-29)
 
 [Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v0.4.0...v24.3.31)
