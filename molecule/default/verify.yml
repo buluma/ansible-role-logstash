@@ -1,13 +1,14 @@
 ---
 - name: Verify
   hosts: all
-  become: yes
-  gather_facts: no
+  become: true
+  gather_facts: false
 
   tasks:
-    - name: check logstash version
+    - name: Check logstash version
       ansible.builtin.command:
         cmd: /usr/share/logstash/bin/logstash --version
       register: logstash_test_one
       failed_when:
         - '"7" not in logstash_test_one.stdout'
+      changed_when: false
