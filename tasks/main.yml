@@ -14,7 +14,7 @@
 
 - name: Include assert.yml
   ansible.builtin.import_tasks: assert.yml
-  run_once: yes
+  run_once: true
   delegate_to: localhost
 
 - name: Install logstash
@@ -26,4 +26,4 @@
   ansible.builtin.service:
     name: logstash
     state: started
-    enabled: yes
+    enabled: true
