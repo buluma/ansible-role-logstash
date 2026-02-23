@@ -1,13 +1,13 @@
 ---
-  - become: true
-    gather_facts: false
-    hosts: all
-    name: Verify
-    tasks:
-      - ansible.builtin.command:
-          cmd: /usr/share/logstash/bin/logstash --version
-        changed_when: false
-        failed_when:
-          - '"7" not in logstash_test_one.stdout'
-        name: Check logstash version
-        register: logstash_test_one
+- become: true
+  gather_facts: false
+  hosts: all
+  name: Verify
+  tasks:
+  - ansible.builtin.command:
+      cmd: /usr/share/logstash/bin/logstash --version
+    changed_when: false
+    failed_when:
+    - '"7" not in logstash_test_one.stdout'
+    name: Check logstash version
+    register: logstash_test_one
