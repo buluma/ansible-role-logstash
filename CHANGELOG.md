@@ -1,13 +1,20 @@
 # Changelog
 
-## [Unreleased](https://github.com/buluma/ansible-role-logstash/tree/HEAD)
+## [v26.6.0](https://github.com/buluma/ansible-role-logstash/tree/v26.6.0) (2026-06-14)
 
-[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v24.3.31...HEAD)
+[Full Changelog](https://github.com/buluma/ansible-role-logstash/compare/v24.3.31...v26.6.0)
 
 **Closed issues:**
 
 - Update action [\#14](https://github.com/buluma/ansible-role-logstash/issues/14)
 - rebuild action [\#13](https://github.com/buluma/ansible-role-logstash/issues/13)
+
+**Merged pull requests:**
+
+- Bump docker/setup-buildx-action from 3 to 4 [\#32](https://github.com/buluma/ansible-role-logstash/pull/32) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump ansible/ansible-lint from 26.1.1 to 26.2.0 [\#31](https://github.com/buluma/ansible-role-logstash/pull/31) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/setup-python from 5 to 6 [\#30](https://github.com/buluma/ansible-role-logstash/pull/30) ([dependabot[bot]](https://github.com/apps/dependabot))
+- Bump actions/checkout from 4 to 6 [\#29](https://github.com/buluma/ansible-role-logstash/pull/29) ([dependabot[bot]](https://github.com/apps/dependabot))
 
 ## [v24.3.31](https://github.com/buluma/ansible-role-logstash/tree/v24.3.31) (2024-03-29)
 
