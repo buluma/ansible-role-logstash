@@ -3,7 +3,47 @@
   hosts: all
   become: true
   gather_facts: false
+
   roles:
     - role: buluma.bootstrap
     - role: buluma.core_dependencies
-    - role: buluma.elastic_repo
+
+  tasks:
+    - name: Gather facts
+      ansible.builtin.setup:
+
+    - name: Install gnupg for apt key handling
+      ansible.builtin.package:
+        name: gnupg
+        state: present
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Add Elastic GPG key (Debian)
+      ansible.builtin.get_url:
+        url: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+        dest: /etc/apt/trusted.gpg.d/elastic.asc
+        mode: "0644"
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Add Elastic apt repository
+      ansible.builtin.apt_repository:
+        repo: "deb https://artifacts.elastic.co/packages/7.x/apt stable main"
+        state: present
+        filename: elastic-7.x
+      when: ansible_facts['os_family'] == 'Debian'
+
+    - name: Add Elastic GPG key (RedHat/Fedora)
+      ansible.builtin.rpm_key:
+        key: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+        state: present
+      when: ansible_facts['os_family'] == 'RedHat'
+
+    - name: Add Elastic yum repository
+      ansible.builtin.yum_repository:
+        name: elastic-7.x
+        description: Elastic repository for 7.x packages
+        baseurl: https://artifacts.elastic.co/packages/7.x/yum
+        gpgkey: https://artifacts.elastic.co/GPG-KEY-elasticsearch
+        gpgcheck: true
+        enabled: true
+      when: ansible_facts['os_family'] == 'RedHat'
